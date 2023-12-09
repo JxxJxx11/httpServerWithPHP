@@ -33,8 +33,7 @@
 
 
 #VS
-/.vs/
+.vs/
 Debug/
 *.user
 *.aps
-tcpserver
