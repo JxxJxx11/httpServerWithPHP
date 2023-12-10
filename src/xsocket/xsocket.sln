@@ -15,6 +15,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcpclient", "..\tcpclient\t
 		{EDE48600-3465-4987-87E3-33BDD6CBA1CA} = {EDE48600-3465-4987-87E3-33BDD6CBA1CA}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "epollserver", "..\epollserver\epollserver.vcxproj", "{71DB0B8D-6FD7-48EF-8D8E-529541995C0F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EDE48600-3465-4987-87E3-33BDD6CBA1CA} = {EDE48600-3465-4987-87E3-33BDD6CBA1CA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xhttp", "..\xhttp\xhttp.vcxproj", "{1579A16E-3596-454B-AE86-15786C981614}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EDE48600-3465-4987-87E3-33BDD6CBA1CA} = {EDE48600-3465-4987-87E3-33BDD6CBA1CA}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -47,6 +57,22 @@ Global
 		{75400E94-AAA3-418E-8384-2F231B664AE1}.Release|x64.Build.0 = Release|x64
 		{75400E94-AAA3-418E-8384-2F231B664AE1}.Release|x86.ActiveCfg = Release|Win32
 		{75400E94-AAA3-418E-8384-2F231B664AE1}.Release|x86.Build.0 = Release|Win32
+		{71DB0B8D-6FD7-48EF-8D8E-529541995C0F}.Debug|x64.ActiveCfg = Debug|x64
+		{71DB0B8D-6FD7-48EF-8D8E-529541995C0F}.Debug|x64.Build.0 = Debug|x64
+		{71DB0B8D-6FD7-48EF-8D8E-529541995C0F}.Debug|x86.ActiveCfg = Debug|Win32
+		{71DB0B8D-6FD7-48EF-8D8E-529541995C0F}.Debug|x86.Build.0 = Debug|Win32
+		{71DB0B8D-6FD7-48EF-8D8E-529541995C0F}.Release|x64.ActiveCfg = Release|x64
+		{71DB0B8D-6FD7-48EF-8D8E-529541995C0F}.Release|x64.Build.0 = Release|x64
+		{71DB0B8D-6FD7-48EF-8D8E-529541995C0F}.Release|x86.ActiveCfg = Release|Win32
+		{71DB0B8D-6FD7-48EF-8D8E-529541995C0F}.Release|x86.Build.0 = Release|Win32
+		{1579A16E-3596-454B-AE86-15786C981614}.Debug|x64.ActiveCfg = Debug|x64
+		{1579A16E-3596-454B-AE86-15786C981614}.Debug|x64.Build.0 = Debug|x64
+		{1579A16E-3596-454B-AE86-15786C981614}.Debug|x86.ActiveCfg = Debug|Win32
+		{1579A16E-3596-454B-AE86-15786C981614}.Debug|x86.Build.0 = Debug|Win32
+		{1579A16E-3596-454B-AE86-15786C981614}.Release|x64.ActiveCfg = Release|x64
+		{1579A16E-3596-454B-AE86-15786C981614}.Release|x64.Build.0 = Release|x64
+		{1579A16E-3596-454B-AE86-15786C981614}.Release|x86.ActiveCfg = Release|Win32
+		{1579A16E-3596-454B-AE86-15786C981614}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
