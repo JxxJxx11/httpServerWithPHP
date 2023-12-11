@@ -33,7 +33,7 @@ WSAinit::~WSAinit() {
 #endif
 }
 
-XSOCKET_API WSAinit wainit;
+XSOCKET_API WSAinit dwsinit;
 
 Xsocket::Xsocket() {
 

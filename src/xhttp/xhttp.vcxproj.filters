@@ -18,5 +18,25 @@
     <ClCompile Include="xhttpserver.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="XHttp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="XHttpNet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="XHttpRes.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="XHttp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="XHttpNet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="XHttpRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

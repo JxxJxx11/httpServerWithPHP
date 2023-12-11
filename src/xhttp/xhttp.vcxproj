@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\..\bin</OutDir>
+    <OutDir>..\..\bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -143,7 +143,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="XHttp.cpp" />
+    <ClCompile Include="XHttpNet.cpp" />
+    <ClCompile Include="XHttpRes.cpp" />
     <ClCompile Include="xhttpserver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="XHttp.h" />
+    <ClInclude Include="XHttpNet.h" />
+    <ClInclude Include="XHttpRes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
