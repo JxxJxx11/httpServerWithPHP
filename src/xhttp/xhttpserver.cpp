@@ -4,9 +4,10 @@
 #include <string>
 #include <thread>
 #include <regex>
-using namespace std;
+
 #include "xsocket.h"
 
+using namespace std;
 class httpThread {
 public:
 	void Close(){
@@ -138,6 +139,7 @@ int main(int argc, char* argv[]) {
 	if (argc > 1) {
 		port = atoi(argv[1]);
 	}
+
 	XTcp server;
 	server.CreateSocket();
 	server.Bind(port);

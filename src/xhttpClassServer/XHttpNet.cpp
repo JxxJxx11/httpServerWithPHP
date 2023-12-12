@@ -17,7 +17,7 @@ void XHttpNet::Main() {
 			break;
 		}
 		buf[len] = '\0';
-		if (res.SetRequest(buf)) {
+		if (!res.SetRequest(buf)) {
 			break;
 		}
 		string head = res.GetHead();

@@ -12,7 +12,9 @@ public:
 	bool SetRequest(std::string request);
 	std::string GetHead();
 	int Read(char* buf, int bufsize);
-	
+private:
+	int filesize;
+	FILE* fp;
 };
 
 #endif

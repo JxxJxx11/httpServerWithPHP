@@ -95,6 +95,7 @@ XTcp XTcp::Accept() {
 void XTcp::Close() {
 	if (sock <= 0) return;
 	closesocket(sock);
+	sock = 0;
 }
 
 int XTcp::Recv(char* buf, int bufSize) {
@@ -157,4 +158,60 @@ bool XTcp::SetBlock(bool isblock) {
 	if (fcntl(sock, F_SETFL, flags) != 0) return false;
 #endif
 	return true;
+}
+
+
+XUdp::XUdp() {
+	memset(ip, 0, sizeof(ip));
+}
+
+XUdp::~XUdp() {
+
+}
+
+int XUdp::CreateSocket() {
+	sock = socket(AF_INET, SOCK_DGRAM, 0);
+	if (sock == -1) {
+		printf("create socket failed!\n");
+		return sock;
+	}
+	printf("sock: %d create success!\n", sock);
+	return sock;
+}
+
+bool XUdp::Bind(unsigned short port) {
+	if (sock <= 0) {
+		CreateSocket();
+	}
+	sockaddr_in saddr;
+	saddr.sin_family = AF_INET;
+	saddr.sin_port = htons(port);
+	saddr.sin_addr.s_addr = htonl(0);
+	if (::bind(sock, (sockaddr*)&saddr, sizeof(saddr)) != 0) {
+		printf("bind port: %d failed!\n", port);
+		return false;
+	}
+	printf("bind port: %d success!\n", port);
+	listen(sock, 10);
+	return true;
+}
+
+int XUdp::Recv(char* buf, int bufSize) {
+	if (sock <= 0) return 0;
+	if (addr == NULL) {
+		addr = new sockaddr_in();
+	}
+	socklen_t len = sizeof(sockaddr_in);
+	int re = recvfrom(sock, buf, bufSize, 0, (sockaddr*)addr, &len);
+	return re;
+}
+
+void XUdp::Close() {
+	if (sock <= 0) return;
+	closesocket(sock);
+	if (addr) {
+		delete addr;
+	}
+	addr = NULL;
+	sock = 0;
 }

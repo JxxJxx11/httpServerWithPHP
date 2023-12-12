@@ -57,4 +57,20 @@ public:
 	char ip[16];
 };
 
+class XSOCKET_API XUdp :public Xsocket {
+public:
+	XUdp();
+	~XUdp();
+	int CreateSocket();
+	bool Bind(unsigned short port);
+	void Close();
+	int Recv(char* buf, int bufSize);
+public:
+	int sock = 0;
+	unsigned short port = 0;
+	char ip[16];
+private:
+	void* addr = NULL;
+};
+
 #endif // !_XSOCKET_H_

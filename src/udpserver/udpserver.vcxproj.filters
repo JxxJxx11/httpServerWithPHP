@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="xhttpserver.cpp">
+    <ClCompile Include="udpserver.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
